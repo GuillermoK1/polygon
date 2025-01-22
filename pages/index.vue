@@ -1,65 +1,206 @@
 <template>
-    <UContainer>
-        <UBadge class="bg-gradient-to-r from-blue-500 to-indigo-500">
-            Large Card to show gradient color (hard coded)
-        </UBadge>
-        <div class="bg-gradient-to-r from-blue-500 to-indigo-500 py-6 h-auto">
-            Division or section using gradient color (hard coded)
+    <UContainer class="my-4 flex flex-col space-y-4">
+        <!-- First section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        1
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the first proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the first section.
+                    </p>
+                </UCardBody>
+            </UCard>
         </div>
-        <UBadge
-        :color="primaryColor">
-            Card
-        </UBadge>
-        <div :class="[`bg-${primaryColor}-500`, 'py-6', 'h-auto']"
-        >
-            First division or section using primary color
         </div>
-        <UBadge
-        :color="secondaryColor">
-            Card
-        </UBadge>
-        <div :class="[`bg-${secondaryColor}-500`, 'py-6', 'h-auto']"
-        >
-            Second division or section using secondary color
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Second section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        2
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the second proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the second section.
+                    </p>
+                </UCardBody>
+            </UCard>
         </div>
-
-        <!-- From here on, variables don't work because I'm trying to use them for gradient styling.
-         It seems like Tailwind doesn't accept multiple variables for dynamic styling on the fly.
-         Maybe the way to solve it is adding some configurations but... who wants to?  -->
-
-        <UBadge
-        :class="[
-                'bg-gradient-to-r',
-                `to-sky-500`, // It will render the primary color according to the config file instead. 
-                `to-${secondaryColor}-500`
-            ]">
-            Card
-        </UBadge>
-        <div
-        :class="[
-                'bg-gradient-to-r',
-                `from-${primaryColor}-500`,// Not rendered
-                `to-sky-500`,// Not rendered
-                'py-6',
-                'h-auto'
-            ]"
-        >
-            Third division using gradient color with primary color selector and hard coded secondary color
         </div>
-        <div
-            :class="[
-                'bg-gradient-to-r',
-                `from-sky-500`,// Rendered!
-                `to-${secondaryColor}-500`,// Not rendered
-                'py-6',
-                'h-auto'
-            ]"
-        >
-            Fourth division using gradient color with hard coded primary color and secondary color selector
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Third section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        3
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the third proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the third section.
+                    </p>
+                </UCardBody>
+            </UCard>
         </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Fourth section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        4
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the fourth proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the fourth section.
+                    </p>
+                </UCardBody>
+            </UCard>
+        </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Fifth section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        5
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the fifth proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the fifth section.
+                    </p>
+                </UCardBody>
+            </UCard>
+        </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Sixth section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        6
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the sixth proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the sixth section.
+                    </p>
+                </UCardBody>
+            </UCard>
+        </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Seventh section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        7
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the seventh proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the seventh section.
+                    </p>
+                </UCardBody>
+            </UCard>
+        </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Eigth section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        8
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the eigth proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the eigth section.
+                    </p>
+                </UCardBody>
+            </UCard>
+        </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
+        <!-- Nineth section -->
+        <div :class="[`bg-${secondaryColor}-500`, 'h-auto', 'rounded-lg', 'p-2']">
+        9
+        <div>
+            <UCard>
+                <UCardHeader>
+                    <h2>
+                        This is the nineth proyect section.
+                    </h2>
+                </UCardHeader>
+                <UCardBody>
+                    <p>
+                        This is the body of the nineth section.
+                    </p>
+                </UCardBody>
+            </UCard>
+        </div>
+        </div>
+        <UButton
+        :color="terciaryColor">
+        Visit
+        </UButton>
     </UContainer>
 </template>
 
 <script setup>
-const { primaryColor, secondaryColor } = useColor()
+const { primaryColor, secondaryColor, terciaryColor } = useColor()
 </script>

@@ -12,6 +12,13 @@ export const useColor = () => {
       }
       return 'indigo'
     })
+    
+    const terciaryColor = useState('terciary-color', () => {
+      if (typeof window !== 'undefined') {
+        return localStorage.getItem('terciary-color') || 'teal'
+      }
+      return 'teal'
+    })
 
     const colorOptions = [
       { label: 'Gray', value: 'gray' },
@@ -40,10 +47,18 @@ export const useColor = () => {
         localStorage.setItem('secondary-color', newColor)
       }
     }
+
+    const setTerciaryColor = (newColor: string) => {
+      terciaryColor.value = newColor
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('terciary-color', newColor)
+      }
+    }
   
     return {
       primaryColor,
       secondaryColor,
+      terciaryColor,
       colorOptions,
       setPrimaryColor,
       setSecondaryColor
